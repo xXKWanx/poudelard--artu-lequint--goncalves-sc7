@@ -1,3 +1,5 @@
+from poudelard.utils.input_utils import demander_choix
+
 
 def actualiser_points_maison(maisons, nom_maison, points):
     if nom_maison in maisons:
@@ -35,20 +37,25 @@ def afficher_maison_gagnante(maisons):
     else:
         print("Aucune maison n'a de score positif.")
 
-
-def repartition_maison(joueur, scores_quiz):
+def repartition_maison(joueur, questions):
     scores_repartition = {"Gryffondor": 0, "Serpentard": 0, "Poufsouffle": 0, "Serdaigle": 0}
     attributs = joueur["Attributs"]
 
     scores_repartition["Gryffondor"] += attributs["courage"] * 2
     scores_repartition["Serpentard"] += attributs["ambition"] * 2
-    scores_repartition["Poufsouffle"] += attributs["loyauté"] * 2
+    scores_repartition["Poufsouffle"] += attributs["loyaute"] * 2
     scores_repartition["Serdaigle"] += attributs["intelligence"] * 2
 
-    for maison, score_quiz in scores_quiz.items():
-        scores_repartition[maison] += score_quiz
+    for question, options, maisons_associees in questions:
+        print(f"\n{question}")
+        choix_valeur = demander_choix("Ton choix", options)
 
-    print("Résumé des scores :\n")
+        index_choisi = options.index(choix_valeur)
+        maison_choisie = maisons_associees[index_choisi]
+
+        scores_repartition[maison_choisie] += 3
+
+    print("Résumé des scores :")
     for maison, score in scores_repartition.items():
         print(f"{maison}: {score} points")
 
@@ -59,4 +66,5 @@ def repartition_maison(joueur, scores_quiz):
         if score > score_maximal:
             score_maximal = score
             maison_finale = maison
+
     return maison_finale

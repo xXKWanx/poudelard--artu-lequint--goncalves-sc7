@@ -51,11 +51,13 @@ def rencontrer_amis(joueur):
     print("Tes choix semblent déjà en dire long sur ta personnalité !")
     print(f"Tes attributs mis à jour : {joueur['Attributs']}")
 
+
 def mot_de_bienvenue():
     print("\n--- Grande Salle de Poudlard ---")
     print("Le professeur Dumbledore se lève et demande le SILENCE !")
     print("Dumbledore : Bienvenue ! Bienvenue pour une nouvelle année à Poudlard !")
-    print("Avant de commencer notre banquet, je voudrais dire quelques mots. Et les voici : Imbécile ! Gras ! Bizarre !")
+    print(
+        "Avant de commencer notre banquet, je voudrais dire quelques mots. Et les voici : Imbécile ! Gras ! Bizarre !")
     print("Merci !")
     input("\nAppuyez sur Entrée pour commencer la cérémonie de répartition...")
 
@@ -65,27 +67,29 @@ def ceremonie_repartition(joueur):
         print("La cérémonie de répartition commence dans la Grande Salle...")
         print("Le Choixpeau magique t'observe longuement avant de poser ses questions :")
 
-        questions = [
-            (
-                "Tu vois un ami en danger. Que fais-tu ?",
-                ["Je fonce l'aider", "Je réfléchis à un plan", "Je cherche de l'aide", "Je reste calme et j'observe"],
-                ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
-            ),
-            (
-                "Quel trait te décrit le mieux ?",
-                ["Courageux et loyal", "Rusé et ambitieux", "Patient et travailleur", "Intelligent et curieux"],
-                ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
-            ),
-            (
-                "Face à un défi difficile, tu...",
-                ["Fonces sans hésiter", "Cherches la meilleure stratégie", "Comptes sur tes amis",
-                 "Analyses le problème"],
-                ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
-            )
-        ]
+    questions = [
+        (
+            "Tu vois un ami en danger. Que fais-tu ?",
+            ["Je fonce l'aider", "Je réfléchis à un plan", "Je cherche de l'aide", "Je reste calme et j'observe"],
 
-        maison_assignee = repartition_maison(joueur, questions)
-        joueur['Maison'] = maison_assignee
+            ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        ),
+        (
+            "Quel trait te décrit le mieux ?",
+            ["Courageux et loyal", "Rusé et ambitieux", "Patient et travailleur", "Intelligent et curieux"],
+
+            ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        ),
+        (
+            "Face à un défi difficile, tu...",
+            ["Fonces sans hésiter", "Cherches la meilleure stratégie", "Comptes sur tes amis",
+             "Analyses le problème"],
+            ["Gryffondor", "Serpentard", "Poufsouffle", "Serdaigle"]
+        )
+    ]
+
+    maison_assignee = repartition_maison(joueur, questions)
+    joueur['Maison'] = maison_assignee
 
         print(f"\nLe Choixpeau s'exclame : {maison_assignee} !!!")
         print(f"Tu rejoins les élèves de {maison_assignee} sous leurs applaudissements !")

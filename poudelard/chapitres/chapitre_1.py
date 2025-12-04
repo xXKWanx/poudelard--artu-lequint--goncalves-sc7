@@ -41,7 +41,7 @@ def recevoir_lettre():
         print("Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie:\n« EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! »\nLe monde magique ne saura jamais que vous existiez... Fin du jeu.\n")
         sys.exit(0)
     else:
-        print("Fantastique ! L'aventure commence. Vous vous préparez votre fabuleuse aventure.\n")
+        print("Fantastique ! L'aventure commence. Vous vous préparez pour votre fabuleuse aventure.\n")
 
 
 def rencontrer_hagrid(personnage):
