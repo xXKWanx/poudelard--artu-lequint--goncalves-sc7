@@ -1,0 +1,50 @@
+{
+  "Obliviate": {
+    "type": "Utilitaire",
+    "description": "Efface des souvenirs spécifiques de la mémoire d'une personne."
+  },
+  "Lumos": {
+    "type": "Utilitaire",
+    "description": "Produit une lumière simulant celle du soleil."
+  },
+  "Wingardium Leviosa": {
+    "type": "Utilitaire",
+    "description": "Fait léviter des objets."
+  },
+  "Accio": {
+    "type": "Utilitaire",
+    "description": "Sortilège d'attraction, fait venir un objet au sorcier."
+  },
+  "Alohomora": {
+    "type": "Utilitaire",
+    "description": "Sortilège de Déverrouillage, ouvre les serrures."
+  },
+  "Rictusempra": {
+    "type": "Offensif",
+    "description": "Fait rire et chatouille la cible, l'affaiblissant."
+  },
+  "Stupefix": {
+    "type": "Offensif",
+    "description": "Sortilège de stupéfixion, met l'adversaire hors d'état de nuire."
+  },
+  "Petrificus Totalus": {
+    "type": "Offensif",
+    "description": "Ligote entièrement le corps de l'adversaire."
+  },
+  "Expelliarmus": {
+    "type": "Défensif",
+    "description": "Désarme un adversaire."
+  },
+  "Protego": {
+    "type": "Défensif",
+    "description": "Sortilège du Bouclier, crée une barrière de protection."
+  },
+  "Expecto Patronum": {
+    "type": "Défensif",
+    "description": "Invoque un esprit protecteur pour repousser les Détraqueurs."
+  },
+  "Boubidibou": {
+    "type": "Offensif",
+    "description": "Implose la personne devant toi et fais apparaitre Max Verstappen."
+  }
+}
