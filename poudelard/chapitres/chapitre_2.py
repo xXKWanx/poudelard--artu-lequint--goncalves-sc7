@@ -127,7 +127,7 @@ def installation_salle_commune(joueur):
 
 def lancer_chapitre_2(personnage):
     print("==================================================")
-    print("              CHAPTER 2: VOYAGE & RÉPARTITION     ")
+    print("          CHAPTER 2: VOYAGE & RÉPARTITION         ")
     print("==================================================")
     rencontrer_amis(personnage)
     mot_de_bienvenue()
