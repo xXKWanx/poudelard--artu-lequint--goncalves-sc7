@@ -63,9 +63,9 @@ def mot_de_bienvenue():
 
 
 def ceremonie_repartition(joueur):
-        print("\n--- Cérémonie de Répartition ---")
-        print("La cérémonie de répartition commence dans la Grande Salle...")
-        print("Le Choixpeau magique t'observe longuement avant de poser ses questions :")
+    print("\n--- Cérémonie de Répartition ---")
+    print("La cérémonie de répartition commence dans la Grande Salle...")
+    print("Le Choixpeau magique t'observe longuement avant de poser ses questions :")
 
     questions = [
         (
@@ -91,8 +91,8 @@ def ceremonie_repartition(joueur):
     maison_assignee = repartition_maison(joueur, questions)
     joueur['Maison'] = maison_assignee
 
-        print(f"\nLe Choixpeau s'exclame : {maison_assignee} !!!")
-        print(f"Tu rejoins les élèves de {maison_assignee} sous leurs applaudissements !")
+    print(f"\nLe Choixpeau s'exclame : {maison_assignee} !!!")
+    print(f"Tu rejoins les élèves de {maison_assignee} sous leurs applaudissements !")
 
 
 def installation_salle_commune(joueur):
