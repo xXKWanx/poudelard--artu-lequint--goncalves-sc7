@@ -32,6 +32,8 @@ def lancer_choix_menu():
                 lancer_chapitre_3(joueur, maisons)
                 chapitre_actuel = 4
 
+
+
         elif choix == "Quitter":
             print("Au revoir, à bientôt à Poudlard !")
             continuer = False
