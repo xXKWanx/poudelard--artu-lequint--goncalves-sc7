@@ -53,17 +53,17 @@ def rencontrer_amis(joueur):
 
 
 def mot_de_bienvenue():
-    print("\n--- Grande Salle de Poudlard ---")
+    print("--- Grande Salle de Poudlard ---\n")
     print("Le professeur Dumbledore se lève et demande le SILENCE !")
     print("Dumbledore : Bienvenue ! Bienvenue pour une nouvelle année à Poudlard !")
     print(
         "Avant de commencer notre banquet, je voudrais dire quelques mots. Et les voici : Imbécile ! Gras ! Bizarre !")
     print("Merci !")
-    input("\nAppuyez sur Entrée pour commencer la cérémonie de répartition...")
+    input("Appuyez sur Entrée pour commencer la cérémonie de répartition...\n")
 
 
 def ceremonie_repartition(joueur):
-    print("\n--- Cérémonie de Répartition ---")
+    print("--- Cérémonie de Répartition ---\n")
     print("La cérémonie de répartition commence dans la Grande Salle...")
     print("Le Choixpeau magique t'observe longuement avant de poser ses questions :")
 

@@ -24,7 +24,7 @@ def apprendre_sorts(joueur, chemin_fichier="data/sorts.json"):
             compteurs[type_sort] += 1
             sorts_appris.append(sort)
             print(f"Tu viens d'apprendre le sortilège: {nom} ({type_sort})\n")
-            input("Appuie sur Entrée pour continuer...\n")
+            demander_texte("Appuie sur Entrée pour continuer...")
 
     print("Tu as terminé ton apprentissage de base à Poudlard !\n")
     print("Voici les sortilèges que tu maîtrises désormais :\n")
@@ -40,13 +40,14 @@ def quiz_magie(joueur, chemin_fichier="data/quiz_magie.json"):
         questions_posees = []
         score_total = 0
 
-        while len(questions_posees) < 4:
+        nb_questions = 0
+        while nb_questions < 4:
             question_actuelle = random.choice(questions_data)
-
             if question_actuelle not in questions_posees:
                 questions_posees.append(question_actuelle)
+                nb_questions += 1  # Incrémentation manuelle
 
-                print(f"{len(questions_posees)}. {question_actuelle['question']}")
+                print(f"{nb_questions}. {question_actuelle['question']}")
                 reponse = demander_texte("> ")
 
                 if reponse.lower() == question_actuelle['reponse'].lower():

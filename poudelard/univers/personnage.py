@@ -19,7 +19,8 @@ def afficher_personnage(joueur):
     print(f"Inventaire : {inventaire_str}")
     print(f"Sortilèges : {sortileges_str}")
     print("Attributs :")
-    for cle, valeur in joueur['Attributs'].items():
+    for cle in joueur['Attributs']:
+        valeur = joueur['Attributs'][cle]
         print(f"{cle}: {valeur}")
 
 def modifier_argent(joueur, montant):

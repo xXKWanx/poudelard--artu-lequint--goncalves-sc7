@@ -1,4 +1,3 @@
-import sys
 from poudelard.univers.personnage import afficher_personnage, initialiser_personnage, modifier_argent, ajouter_objet
 from poudelard.utils.input_utils import demander_texte, demander_nombre, demander_choix, load_fichier
 
@@ -39,7 +38,7 @@ def recevoir_lettre():
     choix = demander_choix("Souhaitez-vous accepter cette invitation et partir pour Poudlard ?", ["Oui, bien sûr !", "Non, je préfère rester avec l’oncle Vernon..."])
     if choix == 2:
         print("Vous déchirez la lettre, l’oncle Vernon pousse un cri de joie:\n« EXCELLENT ! Enfin quelqu’un de NORMAL dans cette maison ! »\nLe monde magique ne saura jamais que vous existiez... Fin du jeu.\n")
-        sys.exit(0)
+        exit(0)
     else:
         print("Fantastique ! L'aventure commence. Vous vous préparez pour votre fabuleuse aventure.\n")
 
@@ -63,7 +62,8 @@ def acheter_fournitures(personnage):
     for cle, article in catalogue.items():
         print(f"{cle}. {article[0]} - {article[1]} galions")
 
-    while len(achats_faits) < 3:
+    nb_achats = 0
+    while nb_achats < 3:
         print(f"Vous avez {personnage['Argent']} galions.")
         restant = [obj for obj in objets_obligatoires if obj not in achats_faits]
         print(f"Objets obligatoires restant à acheter : {', '.join(restant)}")
@@ -79,11 +79,12 @@ def acheter_fournitures(personnage):
                 print("Concentrez-vous d'abord sur les objets obligatoires !")
             elif personnage['Argent'] < prix:
                 print("Vous n'avez plus assez d'argent ! Fin de la partie.")
-                sys.exit()
+                exit(0)
             else:
                 modifier_argent(personnage, -prix)
                 ajouter_objet(personnage, "Inventaire", nom_objet)
                 achats_faits.append(nom_objet)
+                nb_achats += 1
                 print(f"Vous avez acheté {nom_objet} (-{prix} galions).")
 
     print("Tous les objets obligatoires ont été achetés !")
@@ -107,7 +108,7 @@ def acheter_fournitures(personnage):
         print(f"Vous avez choisi {animal_choisi} (-{prix_animal} galions).")
     else:
         print("Vous n'avez pas assez d'argent. Vous partez sans animal.")
-        sys.exit()
+        exit(0)
 
     print("Tous les objets obligatoires ont été achetés avec succès ! Voici votre inventaire final :")
     afficher_personnage(personnage)
